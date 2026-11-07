@@ -1,0 +1,319 @@
+.content-container{
+ margin-top: 60px;
+ text-align: center;
+ color: #D89216;
+}
+/* Movie cards container */
+.movie-cards {
+ display: flex;
+ gap: 20px;
+ justify-content: flex-start;
+ /* Aligns items to the start */
+ align-items: center;
+ width: 100%;
+ padding: 20px;
+ overflow-x: auto;
+ /* Enables horizontal scrolling */
+ scroll-snap-type: x mandatory;
+ /* Ensures cards snap into place when scrolling */
+}
+
+.movie-card {
+ flex: 0 0 auto;
+ /* Prevents cards from shrinking */
+ background-color: #161b22;
+ border: 1px solid #30363d;
+ border-radius: 12px;
+ width: 350px;
+ padding: 20px;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ transition: transform 0.3s, box-shadow 0.3s;
+ overflow: hidden;
+ scroll-snap-align: start;
+ /* Makes each card snap to the start */
+}
+
+.movie-card:hover {
+ transform: scale(1.05);
+ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.movie-card img {
+ width: 100%;
+ height: 200px;
+ object-fit: cover;
+ border-bottom: 1px solid #30363d;
+ margin-bottom: 15px;
+}
+
+.movie-card h3 {
+ margin-bottom: 10px;
+ font-size: 1.4rem;
+ color: #e6edf3;
+ text-align: center;
+}
+
+.movie-card p {
+ margin: 5px 0;
+ font-size: 1rem;
+ color: #8b949e;
+ text-align: center;
+}
+
+/* Book Tickets button styling */
+.book-tickets-button {
+ background-color: #D89216;
+ color: #fff;
+ border: none;
+ padding: 10px 20px;
+ border-radius: 5px;
+ font-weight: bold;
+ cursor: pointer;
+ margin-top: 15px;
+ transition: background-color 0.3s ease;
+}
+
+.book-tickets-button:hover {
+ background-color: #b66c14;
+}
+
+.book-tickets-button:active {
+ background-color: #a85d12;
+}
+
+/* Showtimes container */
+.showtimes-container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 20px;
+ background-color: #161b22;
+ border-radius: 12px;
+ width: 100%;
+ max-width: 1200px;
+ /* Increase max width for more room */
+ margin: 20px auto;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+ position: relative;
+ overflow: hidden;
+ /* Needed for arrow positioning */
+}
+
+/* Showtimes wrapper with arrows */
+.showtime-cards-wrapper {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 100%;
+ max-width: 1000px;
+ overflow: hidden;
+ /* Hide overflowing showtime cards */
+ position: relative;
+ padding: 10px 0;
+}
+
+/* Showtimes cards container */
+.showtime-cards {
+ display: flex;
+  align-items: center;
+   justify-content: center;
+ gap: 10px;
+ overflow-x: auto;
+ scroll-behavior: smooth;
+ /* Smooth scrolling effect */
+ padding: 10px 0;
+ /* width: 100%; */
+}
+
+/* Each showtime card */
+.showtime-card {
+ background-color: #30363d;
+ padding: 10px;
+ margin: 0 5px;
+ border-radius: 8px;
+ min-width: 180px;
+ /* Fixed width to maintain size */
+ max-width: 180px;
+ text-align: center;
+ color: #e6edf3;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ transition: transform 0.3s ease;
+}
+
+.showtime-card:hover {
+ transform: scale(1.05);
+}
+
+/* Text styling for showtime cards */
+.showtime-card h4 {
+ margin-bottom: 5px;
+ font-size: 1rem;
+ color: #D89216;
+}
+
+.showtime-card p {
+ font-size: 0.9rem;
+ margin: 5px 0;
+ color: #c9d1d9;
+}
+
+/* Left arrow */
+.left-arrow {
+ position: absolute;
+ left: 10px;
+ top: 50%;
+ transform: translateY(-50%);
+ background-color: #161b22;
+ color: #e6edf3;
+ border: none;
+ padding: 10px;
+ border-radius: 50%;
+ cursor: pointer;
+ z-index: 1;
+ font-size: 1.5rem;
+}
+
+/* Right arrow */
+.right-arrow {
+ position: absolute;
+ right: 10px;
+ top: 50%;
+ transform: translateY(-50%);
+ background-color: #161b22;
+ color: #e6edf3;
+ border: none;
+ padding: 10px;
+ border-radius: 50%;
+ cursor: pointer;
+ z-index: 1;
+ font-size: 1.5rem;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+ background-color: #b66c14;
+}
+
+.explore-btn {
+ background-color: #D89216;
+ color: #fff;
+ border: none;
+ padding: 10px 20px;
+ border-radius: 5px;
+ font-weight: bold;
+ cursor: pointer;
+ margin-top: 15px;
+ transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+ background-color: #b66c14;
+}
+
+.showtime-cards::-webkit-scrollbar {
+ display: none;
+ /* Hide scrollbar for WebKit browsers */
+}
+
+
+/* booking form styles */
+
+.booking-form-container {
+ background-color: #2e2e2e;
+ color: whitesmoke;
+ padding: 2rem;
+ border-radius: 10px;
+ width: 100%;
+ max-width: 600px;
+ margin: 40px auto;
+ box-shadow: 0 0 20px rgba(235, 239, 239, 0.5);
+}
+
+
+
+.showtime-info {
+ /* background-color: #393fb0; */
+ background-color: #D89216;
+ padding: 1rem;
+ border-radius: 5px;
+ margin-bottom: 1.0rem;
+ font-size: 30px;
+ /* text-align: center; */
+}
+
+.booking-form-container .booking-form{
+  width: 100%;
+  padding: 20px;
+  margin:auto;
+  
+}
+
+.booking-title {
+ color: whitesmoke;
+ text-align: center;
+ margin-top: -10px;
+ margin-bottom: 15px;
+ font-size: 24px;
+ text-shadow: #e2dfd9;
+
+}
+
+.showtime-info p {
+ margin: 0.5rem 0;
+ font-size: 20px;
+}
+
+
+
+.booking-form .form-group {
+ margin-bottom: 0.75rem;
+}
+
+.booking-form .form-control {
+ background-color: #fff;
+ color: #2e2e2e;
+ border-radius: 5px;
+ padding: 0.5rem;
+}
+
+.total-price {
+ font-weight: bold;
+ color: #D89216;
+}
+
+.reserve-btn {
+ width: 100%;
+ background-color: #D89216;
+ border-color: #D89216;
+ color: whitesmoke;
+ margin-top: 1rem;
+ padding: 0.75rem;
+ font-size: 16px;
+ border-radius: 5px;
+}
+
+.action-buttons {
+ display: flex;
+ justify-content: space-between;
+ margin-top: 1.5rem;
+}
+
+.action-buttons .btn-secondary {
+ background-color: #696d62;
+ color: whitesmoke;
+ border-radius: 5px;
+ padding: 0.55rem 1.50rem;
+ margin: auto 5px;
+}
+.action-buttons .btn-secondary:hover{
+ background-color: #D89216;
+ /* background-color: #23231e; */
+}
+
+.showtime-info .movie-title{
+ color: #fefefe;
+ font-size: 25px;
+}

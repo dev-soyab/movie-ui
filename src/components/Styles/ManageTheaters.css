@@ -1,0 +1,268 @@
+/* Global styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Container for managing theaters page */
+  .manage-theaters-container {
+    padding: 20px;
+    background-image: linear-gradient(to left, #0d1117 30%, #2d4079, #6183e9);
+    color: #c9d1d9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  /* Title styling */
+  .manage-theaters-container h2 {
+    margin-bottom: 20px;
+    color: #e6edf3;
+  }
+  
+  /* Theater form styling */
+  .theater-form {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .theater-form h3 {
+    margin-bottom: 15px;
+  }
+  
+  .theater-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    background-color: #0d1117;
+    color: #e6edf3;
+    width: 100%;
+  }
+  
+  .theater-form button {
+    background-color: #f85149;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: background-color 0.3s;
+  }
+  
+  .theater-form button:hover {
+    background-color: #da3633;
+  }
+  
+  /* Theater cards container */
+  .theater-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  /* Theater card styling */
+  .theater-card {
+    background-color: #161b22;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+  }
+  
+  .theater-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Styling for theater information */
+  .theater-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #e6edf3;
+  }
+  
+  .theater-card p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #8b949e;
+    text-align: center;
+  }
+  
+  /* Card button container */
+  .card-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .card-buttons button {
+    background-color: #f85149;
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .card-buttons button:hover {
+    background-color: #da3633;
+  }
+  
+  .card-buttons button:last-child {
+    background-color: #30363d;
+  }
+  
+  .card-buttons button:last-child:hover {
+    background-color: #2e3338;
+  }
+  /* Global styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Container for managing theaters page */
+  .manage-theaters-container {
+    padding: 20px;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Title styling */
+  .manage-theaters-container h2 {
+    margin-bottom: 20px;
+    color: #e6edf3;
+  }
+  
+  /* Theater form styling */
+  .theater-form {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .theater-form h3 {
+    margin-bottom: 15px;
+  }
+  
+  .theater-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    background-color: #0d1117;
+    color: #e6edf3;
+    width: 100%;
+  }
+  
+  .theater-form button {
+    background-color: #f85149;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: background-color 0.3s;
+  }
+  
+  .theater-form button:hover {
+    background-color: #da3633;
+  }
+  
+  /* Theater cards container */
+  .theater-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  /* Theater card styling */
+  .theater-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    width: 300px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+  }
+  
+  .theater-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Styling for theater information */
+  .theater-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #e6edf3;
+  }
+  
+  .theater-card p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #8b949e;
+    text-align: center;
+  }
+  
+  /* Card button container */
+  .card-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .card-buttons button {
+    background-color: #f85149;
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .card-buttons button:hover {
+    background-color: #da3633;
+  }
+  
+  .card-buttons button:last-child {
+    background-color: #30363d;
+  }
+  
+  .card-buttons button:last-child:hover {
+    background-color: #2e3338;
+  }
+  

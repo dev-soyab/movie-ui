@@ -1,0 +1,136 @@
+/* Navbar */
+.user-navbar {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: #D89216;
+ padding: 10px 0px;
+ color: #fff;
+ width: 100%;
+ position: fixed;
+ top: 0;
+ left: 0;
+ z-index: 1000;
+}
+.navbar-brand{
+
+ font-size: 30px;
+ text-decoration:double;
+ z-index: 2;
+}
+
+/* Toggle button for theaters */
+.toggle-theater-button {
+ background-color: #0d6efd;
+ color: whitesmoke;
+ border: none;
+ padding: 10px 20px;
+ border-radius: 5px;
+ cursor: pointer;
+ font-weight: bold;
+ margin-left: 20px;
+}
+
+.all-movies{
+  background-color: #0d6efd;
+   color: whitesmoke;
+   border: none;
+   padding: 10px 20px;
+   border-radius: 5px;
+   cursor: pointer;
+   font-weight: bold;
+   margin-left: 20px;
+}
+.toggle-theater-button:hover {
+ background-color: #0b5ed7;
+}
+.all-movies:hover{
+  background-color: #0b5ed7;
+}
+
+/* Theater container */
+.theaters-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #D89216;
+  min-width: 300px;
+  max-height: 80vh;
+  overflow-x: auto;
+  /* Horizontal scrolling */
+  overflow-y: hidden;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1000;
+  padding: 10px;
+  display: none;
+  white-space: nowrap;
+  /* Prevent wrapping to keep items in a horizontal row */
+}
+
+.theaters-container.visible {
+  display: flex;
+  /* Ensures the container is visible and applies flex layout */
+  flex-direction: row;
+  /* Align items horizontally */
+  gap: 10px;
+  /* Space between theater cards */
+  align-items: center;
+  /* Center align the theater cards vertically */
+}
+
+/* Theater card styling */
+.theater-card {
+ background-color: #696d62;
+ color: #fff;
+ padding: 10px;
+ margin: 5px;
+ border-radius: 5px;
+ box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+ display: inline-block;
+ white-space: normal;
+}
+
+/* Logout button */
+.logout-btn {
+ background-color: #ff4d4d;
+ color: #fff;
+ border: none;
+ padding: 10px 20px;
+ border-radius: 5px;
+ cursor: pointer;
+ margin-left: 20px;
+}
+
+.logout-btn:hover {
+ background-color: #e60000;
+}
+
+.theater-button{
+ text-align: center;
+}
+
+.logo{
+  align-items: self-start;
+  height: 60px;
+  width: 60px;
+  z-index: 1;
+  border-radius: 50%;
+  margin-right: 3px;
+}
+
+.all-bookings-button{
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  border: none;
+   padding: 10px 20px;
+   border-radius: 5px;
+   cursor: pointer;
+   font-weight: bold;
+   margin-left: 20px;
+}
+.all-bookings-button:hover{
+  background-color: #696d62;
+}

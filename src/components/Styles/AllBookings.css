@@ -1,0 +1,126 @@
+/* General page styling */
+.all-bookings {
+ background-image: linear-gradient(to right, #2c3e50, #4ca1af);
+ padding: 40px 20px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ min-height: 100vh;
+}
+
+/* Heading */
+.all-bookings h1 {
+ color: #D89216;
+ margin-bottom: 20px;
+ font-size: 28px;
+ font-weight: bold;
+}
+
+/* Search form */
+.search-form {
+ margin-bottom: 20px;
+ display: flex;
+ align-items: center;
+}
+
+.search-form label {
+ margin-right: 10px;
+ font-size: 16px;
+ color: #fff;
+}
+
+.search-form input {
+ padding: 10px;
+ margin-right: 10px;
+ border-radius: 4px;
+ border: 1px solid #ccc;
+ font-size: 16px;
+}
+
+.search-form button {
+ padding: 10px 15px;
+ background-color: #D89216;
+ color: white;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ font-size: 16px;
+ transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+ background-color: #b87510;
+}
+
+/* Booking card container */
+.booking-cards {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+
+/* Booking card */
+.booking-card {
+ /* background-image: url('path-to-dark-cinematic-background.jpg'); */
+ /* Replace with an actual background image */
+ background-size: cover;
+ background-position: center;
+ color: whitesmoke;
+ padding: 20px;
+ margin: 10px;
+ border-radius: 12px;
+ width: 300px;
+ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
+.booking-card:hover {
+ transform: scale(1.05);
+ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Card title (movie name) */
+.movie-title {
+ font-size: 24px;
+ font-weight: bold;
+ color: #D89216;
+ margin-bottom: 10px;
+}
+
+/* Booking details */
+.booking-details {
+ font-size: 16px;
+ line-height: 1.6;
+ color: #e0e0e0;
+}
+
+/* Highlight important info */
+.highlight {
+ color: #ffcc00;
+ font-weight: bold;
+}
+
+/* CTA (action button) */
+.cta-button {
+ background-color: #f85149;
+ color: whitesmoke;
+ border: none;
+ padding: 12px;
+ text-align: center;
+ border-radius: 6px;
+ cursor: pointer;
+ transition: background-color 0.3s ease;
+ margin-top: 10px;
+}
+
+.cta-button:hover {
+ background-color: #da3633;
+}
+
+/* Error message */
+.error {
+ color: red;
+ margin-top: 10px;
+}

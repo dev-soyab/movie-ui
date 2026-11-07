@@ -1,0 +1,125 @@
+/* Signup.css */
+
+.signup {
+    background-image: linear-gradient(to right, #2c3e50, #4ca1af,#8ca8ac);
+    color: #c9d1d9; /* Light gray text color */
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signup-container {
+    background-color: #2c3e50; /* Slightly lighter dark color for the container */
+    padding: 14px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 400px;
+    /* height: 100%; */
+    width: 90%;
+    margin: 20px auto;
+}
+
+.signup-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff; /* White color for title */
+}
+
+.signup-input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border: 2px solid #30363d; /* Border color */
+    border-radius: 10px;
+    background-color: #0d1117;
+    color: #c9d1d9; /* Text color */
+    transition: border-color 0.3s ease;
+}
+
+.signup-input::placeholder {
+    color: #8b949e; /* Subtle gray for placeholder text */
+}
+
+.signup-input:focus {
+    border-color: #58a6ff; /* Blue border on focus */
+    outline: none;
+}
+
+.signup-button {
+    width: 100%;
+    padding: 12px 0;
+    margin-top: 20px;
+    background-color: #f85149; /* Bright red for button */
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+    background-color: #da3633; /* Darker red on hover */
+}
+
+.signup-button:active {
+    background-color: #a40e0d; /* Even darker red on click */
+}
+
+.signup-message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #8b949e; /* Subtle gray for additional messages */
+}
+
+.signup-select{
+    background-color: rgb(174, 153, 97);
+}
+
+.signup-checkboxes{
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 16px;
+    justify-content: space-between;
+    margin-top: 20px;
+    justify-self: left;
+    margin-bottom: -5px;
+}
+.signup-checkboxes label{
+    margin:10px;
+}
+
+.signup-checkboxes input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Error styles */
+.error {
+    color: #ff4d4d;
+    font-size: 12px;
+    margin-top: 8px;
+    /* Adjust if necessary */
+    /* margin-bottom: 10px 10px; */
+}
+
+/* Ensure all errors are displayed at once */
+.signup-form .input-group p.error {
+    margin: 5px;
+    display: block;
+}
+
+
+.already-account{
+    text-decoration: none;
+    color: white;
+    margin-top: 5px;
+}
+.already-account:hover{
+    color:#58a6ff;
+}

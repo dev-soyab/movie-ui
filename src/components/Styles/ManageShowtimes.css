@@ -1,0 +1,89 @@
+.manage-showtimes-container {
+    padding: 20px;
+    border-radius: 10px;
+        display: flex;
+          flex-direction: column;
+          align-items: center;
+  }
+  
+  .showtime-form {
+    margin-bottom: 20px;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    width: 50%;
+    padding: 20px;
+
+  }
+  
+  .showtime-form input {
+      margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #30363d;
+        border-radius: 4px;
+        background-color: #0d1117;
+        color: #e6edf3;
+        width: 100%;
+  }
+  
+  .showtime-form button {
+    background-color: #f85149;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: background-color 0.3s;
+  }
+  
+  .showtime-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .showtime-cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .showtime-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: calc(33% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .showtime-card h3 {
+    margin-top: 0;
+  }
+  
+  .card-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card-buttons button {
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .card-buttons button:nth-of-type(1) {
+    background-color: #007bff;
+  }
+  
+  .card-buttons button:nth-of-type(1):hover {
+    background-color: #0056b3;
+  }
+  
+  .card-buttons button:nth-of-type(2) {
+    background-color: #dc3545;
+  }
+  
+  .card-buttons button:nth-of-type(2):hover {
+    background-color: #c82333;
+  }
+  

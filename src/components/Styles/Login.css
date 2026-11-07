@@ -1,0 +1,128 @@
+/* Login.css */
+
+.login {
+    background-image: linear-gradient(to right, #2c3e50, #4ca1af);
+    /* background-image: linear-gradient(109.6deg, rgba(156, 252, 248, 1) 11.2%, rgba(110, 123, 251, 1) 91.1%); */
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* .login{
+    background-color: linear-gradient(45 deg, #0d1117, #76a0e0);
+} */
+
+
+.login-container {
+    background-color: #2c3e50;
+    
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 350px;
+    width: 90%;
+    color:black;
+}
+
+.login-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff; /* White color for title */
+}
+
+.login-input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 2px solid #30363d; /* Border color */
+    border-radius: 6px;
+    /* background-color: #0d1117; */
+    color: black; /* Text color */
+    transition: border-color 0.3s ease;
+}
+
+.login-input::placeholder {
+    color: #8b949e; /* Subtle gray for placeholder text */
+}
+
+.login-input:focus {
+    border-color: #58a6ff; /* Blue border on focus */
+    outline: none;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px 0;
+    margin-top: 20px;
+    background-color: #f85149; /* Bright red for button */
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #da3633; /* Darker red on hover */
+}
+
+.login-button:active {
+    background-color: #a40e0d; /* Even darker red on click */
+}
+
+.login-message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #8b949e; /* Subtle gray for additional messages */
+}
+
+
+/* Error message styling */
+.error-message {
+    color: #ff4d4d;
+    font-size: 12px;
+    margin-top: -8px;
+    /* Adjust if necessary */
+    margin-bottom: 10px;
+}
+
+.forgot-password-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.forgot-password-btn:hover{
+    color:#58a6ff;
+}
+
+.btn-secondary {
+    background-color: #696d62;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #D89216;
+    color: white;
+}
+
+.no-account{
+    text-decoration: none;
+    color: white;
+    margin-top: 5px;
+}
+.no-account:hover{
+    color:#58a6ff;
+}
