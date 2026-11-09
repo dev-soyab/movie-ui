@@ -1,6 +1,7 @@
 import axios from 'axios';
+import API_BASE_URL from '../api/baseUrl';
 
-const API_URL = 'http://localhost:8080/api/auth'; // Update with your API base URL
+const API_URL = `${API_BASE_URL}/api/auth`;
 
 export const getUserByUsername = (username) => {
   return axios.get(`${API_URL}/username/${username}`);

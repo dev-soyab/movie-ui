@@ -47,7 +47,7 @@ const ManageTheaters = () => {
   const handleAddTheater = async (e) => {
     e.preventDefault();
     try {
-      const addedTheater = await addTheater(newTheater);
+      await addTheater(newTheater);
       alert("Theater Addded Successfully!!");
       loadTheaters();
       // setTheaters([...theaters, addedTheater]);

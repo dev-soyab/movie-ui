@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import "./Styles/Home.css"; // Import the CSS file for Home component
-import { fetchMovies } from "../services/MovieService";
 import Footer from "./Footer";
 
 function Home({ movies }) {

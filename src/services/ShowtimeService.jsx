@@ -1,10 +1,12 @@
 import axios from "axios";
-const API_BASE_URL = "http://localhost:8080/api/showtimes";
+import API_BASE_URL from "../api/baseUrl";
+
+const SHOWTIMES_URL = `${API_BASE_URL}/api/showtimes`;
 
 // Fetch all showtimes
 export const fetchShowtimes = async () => {
   try {
-    const response = await axios.get(`${API_BASE_URL}`);
+    const response = await axios.get(SHOWTIMES_URL);
     return response.data;
   } catch (error) {
     console.error("Error fetching showtimes:", error);
@@ -15,7 +17,7 @@ export const fetchShowtimes = async () => {
 // Add a new showtime
 export const addShowtime = async (newShowtime) => {
   try {
-    const response = await axios.post(API_BASE_URL, newShowtime);
+    const response = await axios.post(SHOWTIMES_URL, newShowtime);
     return response.data;
   } catch (error) {
     console.error("Error adding showtime:", error);
@@ -27,7 +29,7 @@ export const addShowtime = async (newShowtime) => {
 export const updateShowtime = async (showtimeId, updatedShowtime) => {
   try {
     const response = await axios.put(
-      `${API_BASE_URL}/${showtimeId}`,
+      `${SHOWTIMES_URL}/${showtimeId}`,
       updatedShowtime
     );
     return response.data;
@@ -40,7 +42,7 @@ export const updateShowtime = async (showtimeId, updatedShowtime) => {
 // Delete a showtime
 export const deleteShowtime = async (id) => {
   try {
-    await axios.delete(`${API_BASE_URL}/${id}`);
+    await axios.delete(`${SHOWTIMES_URL}/${id}`);
   } catch (error) {
     console.error("Error deleting showtime:", error);
     throw error;

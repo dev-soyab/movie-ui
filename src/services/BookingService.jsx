@@ -1,11 +1,12 @@
 import axios from "axios";
+import API_BASE_URL from "../api/baseUrl";
 
-const API_BASE_URL = "http://localhost:8080/api/bookings";
+const BOOKINGS_URL = `${API_BASE_URL}/api/bookings`;
 
 // Fetch all bookings
 export const fetchBookings = async () => {
   try {
-    const response = await axios.get(API_BASE_URL);
+    const response = await axios.get(BOOKINGS_URL);
     return response.data;
   } catch (error) {
     console.error("Error fetching bookings:", error);
@@ -16,7 +17,7 @@ export const fetchBookings = async () => {
 // Add a new booking
 export const addBooking = async (newBooking) => {
   try {
-    const response = await axios.post(API_BASE_URL, newBooking);
+    const response = await axios.post(BOOKINGS_URL, newBooking);
     return response.data;
   } catch (error) {
     console.error("Error adding booking:", error);
@@ -27,7 +28,7 @@ export const addBooking = async (newBooking) => {
 // Update an existing booking
 export const updateBooking = async (bookingId, updatedBooking) => {
   try {
-    await axios.put(`${API_BASE_URL}/${bookingId}`, updatedBooking);
+    await axios.put(`${BOOKINGS_URL}/${bookingId}`, updatedBooking);
   } catch (error) {
     console.error("Error updating booking:", error);
     throw error;
@@ -37,7 +38,7 @@ export const updateBooking = async (bookingId, updatedBooking) => {
 // Delete a booking
 export const deleteBooking = async (bookingId) => {
   try {
-    await axios.delete(`${API_BASE_URL}/${bookingId}`);
+    await axios.delete(`${BOOKINGS_URL}/${bookingId}`);
     alert("Booking delete successfully, will be processing your refund soon");
   } catch (error) {
     console.error("Error deleting booking:", error);

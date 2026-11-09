@@ -1,6 +1,7 @@
 import axios from "axios";
+import API_BASE_URL from "./baseUrl";
 
-const API_URL = "http://localhost:8080/api/auth"; // Adjusted API URL
+const API_URL = `${API_BASE_URL}/api/auth`;
 
 // Login function using axios
 export const login = async (credentials) => {

@@ -2,13 +2,14 @@
 // /import { axios } from "axios";
 
 import axios from "axios";
+import API_BASE_URL from "../api/baseUrl";
 
-const API_BASE_URL = "http://localhost:8080/api/theaters";
+const THEATERS_URL = `${API_BASE_URL}/api/theaters`;
 
 // Fetch all theaters
 export const fetchTheaters = async () => {
   try {
-    const response = await axios.get(API_BASE_URL);
+    const response = await axios.get(THEATERS_URL);
     if (!Array.isArray(response.data))
       throw new Error("Unexpected data format");
     return response.data;
@@ -21,7 +22,7 @@ export const fetchTheaters = async () => {
 // Add a new theater
 export const addTheater = async (theater) => {
   try {
-    const response = await axios.post(API_BASE_URL, theater, {
+    const response = await axios.post(THEATERS_URL, theater, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -36,7 +37,7 @@ export const addTheater = async (theater) => {
 // Update an existing theater
 export const updateTheater = async (id, theater) => {
   try {
-    await axios.put(`${API_BASE_URL}/${id}`, theater, {
+    await axios.put(`${THEATERS_URL}/${id}`, theater, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -50,7 +51,7 @@ export const updateTheater = async (id, theater) => {
 // Delete a theater
 export const deleteTheater = async (id) => {
   try {
-    await axios.delete(`${API_BASE_URL}/${id}`);
+    await axios.delete(`${THEATERS_URL}/${id}`);
   } catch (error) {
     console.error("Error deleting theater:", error);
     throw error;
@@ -60,7 +61,7 @@ export const deleteTheater = async (id) => {
 
 export const fetchTheaterById = async (id) => {
   try{
-    const response = await axios.get(`${API_BASE_URL}/${id}`);
+    const response = await axios.get(`${THEATERS_URL}/${id}`);
      
     console.log("Fetched data:",response.data);
     return response.data;
@@ -73,7 +74,7 @@ export const fetchTheaterById = async (id) => {
 
 export const fetchMoviesByTheaterId = async (theaterId)=>{
   try {
-    const response = await axios.get(`${API_BASE_URL}/${theaterId}/movies`);
+    const response = await axios.get(`${THEATERS_URL}/${theaterId}/movies`);
     // const movieIds = await response.data;
     // console.log("Fetched data:", response.data);
     return response.data;

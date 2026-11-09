@@ -7,9 +7,6 @@ import { useState, useEffect } from "react";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import { fetchMovies } from "./services/MovieService";
-import { fetchTheaters } from "./services/TheaterService";
-import { fetchMoviesByTheaterId } from "./services/TheaterService";
-import { fetchMoviesByIds } from "./services/MovieService";
 import Logout from "./components/Logout";
 
 import UserDashboard from "./components/UserDashboard"
@@ -20,9 +17,6 @@ import LoginContextProvider from "./components/LoginContextProvider";
 
 function App() {
   const [movies, setMovies] = useState([]);
-  const [selectedTheater, setSelectedTheater] = useState(null);
-  const [showTheaters, setShowTheaters] = useState(false);
-  const [theaters, setTheaters] = useState([]);
 
   const loadMovies = async () => {
     try {
@@ -36,56 +30,6 @@ function App() {
   useEffect(() => {
     loadMovies();
   }, []);
-
-  const loadTheaters = async () => {
-    try {
-      const theatersData = await fetchTheaters();
-      setTheaters(theatersData);
-      // console.log(theatersData);
-    } catch (error) {
-      console.error("Error loading theaters:", error);
-    }
-  };
-
-  useEffect(() => {
-    // console.log("Inside useEffect of navbar theater fetching");
-
-    loadTheaters();
-  }, []);
-
-  const handleTheaterSelection = (theater) => {
-    setSelectedTheater(theater); // Set selected theater name
-    // Optionally, you could filter movies based on the theater here
-  };
-  useEffect(() => {
-    // Only execute if `selectedTheater` is not null
-    if (selectedTheater != null) {
-      const loadMovieIds = async () => {
-        try {
-          // Fetch movie IDs by theater ID
-          const movieIds = await fetchMoviesByTheaterId(
-            selectedTheater.theaterId
-          );
-
-          // Fetch movies by those IDs
-          const theaterMovies = await fetchMoviesByIds(movieIds);
-
-          // Update the movies state
-          setMovies(theaterMovies);
-          setShowTheaters(false);
-          console.log("Fetched Movies", theaterMovies);
-        } catch (error) {
-          console.error("Error loading theater movies:", error);
-        }
-      };
-
-      // Call the function
-      loadMovieIds();
-    }
-  }, [selectedTheater]); // The effect will run only when `selectedTheater` changes
-
-
-
 
   return (
     <LoginContextProvider>

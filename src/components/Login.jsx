@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios"; // Assuming axios is used for HTTP requests
 import { Link } from "react-router-dom";
 import { LoginContext } from "./LoginContext";
+import API_BASE_URL from "../api/baseUrl";
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -25,7 +26,7 @@ const Login = () => {
       if (response) {
         console.log("Inside Login.jsx: ", response);
         toggleLogin();
-        if(response.redirectUrl=="/user-dashboard"){         
+        if(response.redirectUrl==="/user-dashboard"){
           navigate("/movies");
         }
         else{
@@ -61,7 +62,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:8080/api/auth/${forgotPasswordUsername}`,
+        `${API_BASE_URL}/api/auth/${forgotPasswordUsername}`,
         null, // No body data
         {
           params: {
@@ -78,7 +79,7 @@ const Login = () => {
   };
   useEffect(()=>{
     console.log("loggedIn:",loggedIn);
-  },[]);
+  },[loggedIn]);
   return (
     <div className="login">
       <div className="login-background">

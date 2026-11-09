@@ -1,10 +1,9 @@
-import React, { useEffect, useState, useRef, useCallback } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 // import { fetchMovies } from "../services/MovieService";
 import "./Styles/UserMovies.css";
 import { fetchTheaterById } from "../services/TheaterService";
 import { addBooking } from "../services/BookingService";
 import { getUserByUsername } from "../services/UserService";
-import { useNavigate } from "react-router-dom";
 
 const UserMovies = ({
   onBookTickets,
@@ -24,10 +23,6 @@ const UserMovies = ({
   const [totalPrice, setTotalPrice] = useState(500); // default one ticket price
   const [showBookingForm, setShowBookingForm] = useState(false);
   const [username, setUsername] = useState("");
-
-  const showtimeCardsRef = useRef(null);
-
-  const navigate = useNavigate();
 
   const handleBookTicketsClick = (movie) => {
     setSelectedMovie(movie);
@@ -66,14 +61,6 @@ const UserMovies = ({
       });
     }
   }, [selectedMovie, fetchingTheater]); // Add fetchingTheater as a dependency
-
-  const scrollShowtimes = (direction) => {
-    const scrollAmount = direction === "left" ? -200 : 200;
-    showtimeCardsRef.current.scrollBy({
-      left: scrollAmount,
-      behavior: "smooth",
-    });
-  };
 
   const handleBookingClick = (showtime) => {
     setSelectedShowtime(showtime);
@@ -224,7 +211,7 @@ const UserMovies = ({
         <div className="showtimes-container">
           <h2>{selectedMovie.title} Shows</h2>
           <div className="showtime-cards-wrapper">
-            <div className="showtime-cards" ref={showtimeCardsRef}>
+            <div className="showtime-cards">
               {selectedMovie.showtimes.map((showtime) => {
                 const theater = theaters[showtime.theaterId]; // Get cached theater data
                 return (
@@ -306,6 +293,5 @@ const UserMovies = ({
 };
 
 export default UserMovies;
-
 
 

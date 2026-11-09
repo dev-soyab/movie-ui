@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Styles/AllBookings.css";
 import { deleteBooking } from "../services/BookingService";
 import { useNavigate } from "react-router-dom";
+import API_BASE_URL from "../api/baseUrl";
 
 const AllBookings = () => {
   const [username, setUsername] = useState("");
@@ -18,22 +19,22 @@ const AllBookings = () => {
     try {
       // Step 1: Fetch user details including bookings using the provided username
       const userResponse = await axios.get(
-        `http://localhost:8080/api/auth/username/${username}`
+        `${API_BASE_URL}/api/auth/username/${username}`
       );
       const userBookings = userResponse.data.bookings;
 
       // Step 2: Fetch details for each booking
       const detailedBookingsPromises = userBookings.map(async (booking) => {
         const showtimeResponse = await axios.get(
-          `http://localhost:8080/api/showtimes/${booking.showtimeId}`
+          `${API_BASE_URL}/api/showtimes/${booking.showtimeId}`
         );
         const showtime = showtimeResponse.data;
 
         const movieResponse = await axios.get(
-          `http://localhost:8080/api/movies/${showtime.movieId}`
+          `${API_BASE_URL}/api/movies/${showtime.movieId}`
         );
         const theaterResponse = await axios.get(
-          `http://localhost:8080/api/theaters/${showtime.theaterId}`
+          `${API_BASE_URL}/api/theaters/${showtime.theaterId}`
         );
 
         return {
